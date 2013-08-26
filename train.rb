@@ -13,10 +13,4 @@ end
 
 puts " * and a caboose."
 
-Passenger = Struct.new(:city, :name)
-
-passenger = Passenger.new
-passenger[:name] = "Lori"
-
-puts "#{name} is on the #{city} train."
 
