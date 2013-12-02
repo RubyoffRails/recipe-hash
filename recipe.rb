@@ -4,7 +4,7 @@ Train = Struct.new(:city, :engines, :cars, :caboose) do
   end
 end 
 
-train = Train.new("Los Angeles", 1, 15, 1)
+train = Train.new(city="Los Angeles", engines=1, cars=15, caboose=1)
 
 Passenger = Struct.new(:name, :train) do
   def to_s
