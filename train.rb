@@ -1,40 +1,22 @@
-Passenger = Struct.new(:name)
-Train = Struct.new(:destination, :number_of_cars, :caboose, :number_of_engine)
+train = {}
+train[:current_city] = 'New York'
+train[:number_of_engines] = 4
+train[:number_of_cars] = 8
+train[:caboose] = true
 
-passengers = [Passenger.new(name: 'Bill Smith'), Passenger.new(name: 'Sarah Robot')]
-train = Train.new( passengers, {destination: 'New York', number_of_engines: 4, caboose: true, number_of_cars: 5})
+Passenger = Struct.new(:train, :name)
 
-puts "Destination: #{train.destination}"
-puts "Cars: #{train.number_of_cars}"
-puts "Caboose: #{train.caboose}"
-puts "Passengers: #{passengers}"
-puts "Engines: #{train.number_of_engines}"
+passenger = Passenger.new('Bill Smith') #(current_city: 'New York', number_of_engines: 4, number_of_cars: 8, caboose: true, name: 'Bill Smith')
+passenger.train = train
 
-
-
-=begin
-puts 'train specifications:'
-description.each do |key, value|
+puts "Train Specifications:"
+passenger.train.each do |key, value|
 	puts "#{key}: #{value}"
-end
+end 
 
-puts 'train destination:'
-destination.each do |key, value|
-	puts "#{key}: #{value}"
-end
+puts "Passenger Name:"
+passenger[:name] = 'Bill Smith'
+puts passenger.name
 
-puts 'Passenger\'s name'
-bill.name.each do |key, value|
-	puts "#{key}: #{value}"
-end
 
-puts 'Bill\'s destination'
-bill.destination.each do |key, value|
-	puts "#{key}: #{value}"
-end
-
-puts 'Bill\'s train specifications'
-bill.description.each do |key, value|
-	puts "#{key}: #{value}"
-end
-=end
+#Passenger = Struct.new
