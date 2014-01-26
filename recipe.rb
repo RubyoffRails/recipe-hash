@@ -1,17 +1,29 @@
-ingredients = {}
-ingredients[:avocados] = 4
-ingredients[:jalapenos] = 2
+# Method(s) to prettify output format
 
-Recipe = Struct.new(:ingredients, :method)
-
-recipe = Recipe.new( {avacados: 4, jalapenos: 2}, ["Peel / Slice Avocados", "Chop jalapenos into small dice"])
-
-puts "ingredients"
-recipe.ingredients.each do |key, value|
-	puts "* #{key}: #{value}"
+def prettify(obj)
+	obj.to_s.capitalize.gsub(/_/, ' ')
 end
 
-puts "\nMethod"
-recipe.method.each_with_index do |step, index|
-	puts "#{index+1}. #{step}"
+train = {}
+train[:current_city] = "St. Louis"
+train[:number_of_engines] = 3
+train[:number_of_cars] = 10
+train[:caboose] = true
+
+Passenger = Struct.new(:passenger_information, :train)
+
+passenger = Passenger.new( {name: "Mike Vezzani", city_of_origin: "St. Louis", 
+													  travelling_to: "San Francisco"}, {current_city: "St. Louis",
+																														number_of_engines: 3,
+																														number_of_cars: 10,
+																														caboose: true})
+
+puts "---- Passenger Information ----"
+passenger.passenger_information.each do |k, v|
+	puts "#{prettify(k)}: #{v}"
+end
+
+puts "---- Train Information ----"
+passenger.train.each do |k, v|
+	puts "#{prettify(k)}: #{v}"
 end
