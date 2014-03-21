@@ -13,7 +13,7 @@ def print_train train, consists
 		puts "\t* #{key}: #{value}"
 	end
 end
-
+#version 1
 consists = {}
 consists[:engines] = 3
 consists[:cars] = 2
@@ -23,7 +23,8 @@ train = {}
 train[:current_city] = "Minion Town"
 train[:consists] = consists
 
-consists2 = {engines: 3, cars: 2, cabose: true}
+#version 2
+consists2 = {engines: 1, cars: 4, cabose: false}
 train2 = {current_city: "Minion Town Too" ,consists: consists2}
 train2.each do |key,value|
 	puts "#{key} #{value}"
@@ -31,3 +32,8 @@ end
 
 print_train(train,consists)
 print_train(train2,consists2)
+
+Passenger = Struct.new(:name, :train)
+passenger = Passenger.new("Papoy", train)
+
+# puts passenger # just checking it's not a dud
