@@ -17,8 +17,8 @@ It should have
 Show Notes
 -----------
 
-* [http://www.weeatt.com/recipes/guacamole](Guacamole Recipe)
-* [http://rubyfiddle.com/riddles/924d3](Working Recipe RubyFiddle as Hash)
-* [http://rubyfiddle.com/riddles/f4f45](Working Recipe RubyFiddle as Struct)
+* [Guacamole Recipe](http://www.weeatt.com/recipes/guacamole)
+* [Working Recipe RubyFiddle as Hash](http://rubyfiddle.com/riddles/924d3)
+* [Working Recipe RubyFiddle as Struct](http://rubyfiddle.com/riddles/f4f45)
 
 Copyright: Jesse Wolgamott, MIT License (See LICENSE)
