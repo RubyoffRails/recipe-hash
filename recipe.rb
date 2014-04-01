@@ -1,17 +1,14 @@
-ingredients = {}
-ingredients[:avocados] = 4
-ingredients[:jalapenos] = 2
+train = {}
+train[:Destination] = "New York"
+train[:Engines] = 4
+train[:Cars] = 20
+train[:Caboose] = "Yes we have one!"
 
-Recipe = Struct.new(:ingredients, :method)
+Passenger = Struct.new(:name, :train)
 
-recipe = Recipe.new( {avacados: 4, jalapenos: 2}, ["Peel / Slice Avocados", "Chop jalapenos into small dice"])
+passenger = Passenger.new( "Matz", {Destination: "New York", Engines: 4, Cars: 20, Caboose: "Yes we have one!"})
 
-puts "ingredients"
-recipe.ingredients.each do |key, value|
+puts "There is a passenger named #{passenger.name} on a train with the following details:"
+passenger.train.each do |key, value|
 	puts "* #{key}: #{value}"
-end
-
-puts "\nMethod"
-recipe.method.each_with_index do |step, index|
-	puts "#{index+1}. #{step}"
 end
