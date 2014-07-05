@@ -15,3 +15,18 @@ puts "\nMethod"
 recipe.method.each_with_index do |step, index|
 	puts "#{index+1}. #{step}"
 end
+
+#My code 
+
+passenger = {}
+passenger[:name] = "Train"
+passenger[:train] = "Train"
+
+Train = Struct.new(:passenger)
+
+train = Train.new( {current_city: "Philadelphia", number_of_engines: 4, number_of_cars: 8, caboose: 1} )
+
+puts "train"
+train.each do |key, value|
+	puts "#{key}: #{value}"
+end
